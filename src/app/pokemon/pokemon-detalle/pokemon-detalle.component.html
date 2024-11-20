@@ -1,22 +1,21 @@
-<!-- <div class="container">
+<div class="container">
   <div class="row">
     <div class="col-md-12">
       <h1>Detalle de Pokemon</h1>
       <div class="card">
         <div class="card-title">
           <h2>Detalle de Pokemon</h2>
-          <div class="card-body">
-            <strong>Nombre: {{pokemon.name}}</strong> 
-            <img [src]="pokemon.sprites.front_default" alt="pokemon.name">
-            <p>Id: {{pokemon.id}}</p>
-            <p>Altura: {{pokemon.height}}</p>
-            <p>Peso: {{pokemon.weight}}</p>
-            <p>Experiencia base: {{pokemon.base_experience}}</p>
-            <p>Orden: {{pokemon.order}}</p>
+          <div class="card-body" *ngFor="let img from pokemon.sprites">
+            <strong>Nombre: {{pokemon?.name}}</strong> 
+            <img [src]="img.front_default" alt="pokemon.name" >
+            <p>Id: {{pokemon?.id}}</p>
+            <p>Altura: {{pokemon?.height}}</p>
+            <p>Peso: {{pokemon?.weight}}</p>
+            <p>Orden: {{pokemon?.abilities}}</p>
           </div>
-          <a [routerLink]=""><p>Tipos: {{pokemon.}}</p></a>
+          <!-- <a [routerLink]=""><p>Tipos: {{pokemon?.types}}</p></a> -->
           
         </div>
       </div>
     </div>
-  </div> -->
+  </div>

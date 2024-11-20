@@ -12,7 +12,9 @@ export class PokemonDetalleComponent implements OnInit {
   pokemonService: any;
   
 
-  constructor(pokemonService: PokemonService) { }
+  constructor(pokemonService: PokemonService) { 
+    this.pokemonService = pokemonService;
+  }
 
   ngOnInit() {
     this.pokemon = this.pokemonService.getPokemon();
